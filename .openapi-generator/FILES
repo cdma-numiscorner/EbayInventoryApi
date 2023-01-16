@@ -1,6 +1,5 @@
 .gitignore
-.openapi-generator-ignore
-.php_cs
+.php-cs-fixer.dist.php
 .travis.yml
 README.md
 composer.json
@@ -14,6 +13,7 @@ docs/Model/Address.md
 docs/Model/Amount.md
 docs/Model/Availability.md
 docs/Model/AvailabilityDistribution.md
+docs/Model/AvailabilityWithAll.md
 docs/Model/BaseResponse.md
 docs/Model/BestOffer.md
 docs/Model/BulkEbayOfferDetailsWithKeys.md
@@ -37,9 +37,11 @@ docs/Model/EbayOfferDetailsWithId.md
 docs/Model/EbayOfferDetailsWithKeys.md
 docs/Model/Error.md
 docs/Model/ErrorParameter.md
+docs/Model/ExtendedProducerResponsibility.md
 docs/Model/Fee.md
 docs/Model/FeeSummary.md
 docs/Model/FeesSummaryResponse.md
+docs/Model/FormatAllocation.md
 docs/Model/GeoCoordinates.md
 docs/Model/GetInventoryItem.md
 docs/Model/GetInventoryItemResponse.md
@@ -82,6 +84,7 @@ docs/Model/ProductIdentifier.md
 docs/Model/PublishByInventoryItemGroupRequest.md
 docs/Model/PublishResponse.md
 docs/Model/ShipToLocationAvailability.md
+docs/Model/ShipToLocationAvailabilityWithAll.md
 docs/Model/ShippingCostOverride.md
 docs/Model/SpecialHours.md
 docs/Model/Specification.md
@@ -106,6 +109,7 @@ lib/Model/Address.php
 lib/Model/Amount.php
 lib/Model/Availability.php
 lib/Model/AvailabilityDistribution.php
+lib/Model/AvailabilityWithAll.php
 lib/Model/BaseResponse.php
 lib/Model/BestOffer.php
 lib/Model/BulkEbayOfferDetailsWithKeys.php
@@ -129,9 +133,11 @@ lib/Model/EbayOfferDetailsWithId.php
 lib/Model/EbayOfferDetailsWithKeys.php
 lib/Model/Error.php
 lib/Model/ErrorParameter.php
+lib/Model/ExtendedProducerResponsibility.php
 lib/Model/Fee.php
 lib/Model/FeeSummary.php
 lib/Model/FeesSummaryResponse.php
+lib/Model/FormatAllocation.php
 lib/Model/GeoCoordinates.php
 lib/Model/GetInventoryItem.php
 lib/Model/GetInventoryItemResponse.php
@@ -175,6 +181,7 @@ lib/Model/ProductIdentifier.php
 lib/Model/PublishByInventoryItemGroupRequest.php
 lib/Model/PublishResponse.php
 lib/Model/ShipToLocationAvailability.php
+lib/Model/ShipToLocationAvailabilityWithAll.php
 lib/Model/ShippingCostOverride.php
 lib/Model/SpecialHours.php
 lib/Model/Specification.php
@@ -197,6 +204,7 @@ test/Model/AddressTest.php
 test/Model/AmountTest.php
 test/Model/AvailabilityDistributionTest.php
 test/Model/AvailabilityTest.php
+test/Model/AvailabilityWithAllTest.php
 test/Model/BaseResponseTest.php
 test/Model/BestOfferTest.php
 test/Model/BulkEbayOfferDetailsWithKeysTest.php
@@ -220,9 +228,11 @@ test/Model/EbayOfferDetailsWithIdTest.php
 test/Model/EbayOfferDetailsWithKeysTest.php
 test/Model/ErrorParameterTest.php
 test/Model/ErrorTest.php
+test/Model/ExtendedProducerResponsibilityTest.php
 test/Model/FeeSummaryTest.php
 test/Model/FeeTest.php
 test/Model/FeesSummaryResponseTest.php
+test/Model/FormatAllocationTest.php
 test/Model/GeoCoordinatesTest.php
 test/Model/GetInventoryItemResponseTest.php
 test/Model/GetInventoryItemTest.php
@@ -265,6 +275,7 @@ test/Model/ProductTest.php
 test/Model/PublishByInventoryItemGroupRequestTest.php
 test/Model/PublishResponseTest.php
 test/Model/ShipToLocationAvailabilityTest.php
+test/Model/ShipToLocationAvailabilityWithAllTest.php
 test/Model/ShippingCostOverrideTest.php
 test/Model/SpecialHoursTest.php
 test/Model/SpecificationTest.php
