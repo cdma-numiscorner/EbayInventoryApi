@@ -7,8 +7,7 @@ The Inventory API is used to create and manage inventory, and then to publish an
 
 ### Requirements
 
-PHP 7.4 and later.
-Should also work with PHP 8.0.
+PHP 7.2 and later.
 
 ### Composer
 

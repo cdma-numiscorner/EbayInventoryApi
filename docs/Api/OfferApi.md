@@ -1,21 +1,21 @@
 # OpenAPI\EbayInventoryClient\OfferApi
 
-All URIs are relative to https://api.ebay.com/sell/inventory/v1, except if the operation defines another base path.
+All URIs are relative to https://api.ebay.com/sell/inventory/v1.
 
-| Method | HTTP request | Description |
-| ------------- | ------------- | ------------- |
-| [**bulkCreateOffer()**](OfferApi.md#bulkCreateOffer) | **POST** /bulk_create_offer |  |
-| [**bulkPublishOffer()**](OfferApi.md#bulkPublishOffer) | **POST** /bulk_publish_offer |  |
-| [**createOffer()**](OfferApi.md#createOffer) | **POST** /offer |  |
-| [**deleteOffer()**](OfferApi.md#deleteOffer) | **DELETE** /offer/{offerId} |  |
-| [**getListingFees()**](OfferApi.md#getListingFees) | **POST** /offer/get_listing_fees |  |
-| [**getOffer()**](OfferApi.md#getOffer) | **GET** /offer/{offerId} |  |
-| [**getOffers()**](OfferApi.md#getOffers) | **GET** /offer |  |
-| [**publishOffer()**](OfferApi.md#publishOffer) | **POST** /offer/{offerId}/publish/ |  |
-| [**publishOfferByInventoryItemGroup()**](OfferApi.md#publishOfferByInventoryItemGroup) | **POST** /offer/publish_by_inventory_item_group/ |  |
-| [**updateOffer()**](OfferApi.md#updateOffer) | **PUT** /offer/{offerId} |  |
-| [**withdrawOffer()**](OfferApi.md#withdrawOffer) | **POST** /offer/{offerId}/withdraw |  |
-| [**withdrawOfferByInventoryItemGroup()**](OfferApi.md#withdrawOfferByInventoryItemGroup) | **POST** /offer/withdraw_by_inventory_item_group |  |
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**bulkCreateOffer()**](OfferApi.md#bulkCreateOffer) | **POST** /bulk_create_offer | 
+[**bulkPublishOffer()**](OfferApi.md#bulkPublishOffer) | **POST** /bulk_publish_offer | 
+[**createOffer()**](OfferApi.md#createOffer) | **POST** /offer | 
+[**deleteOffer()**](OfferApi.md#deleteOffer) | **DELETE** /offer/{offerId} | 
+[**getListingFees()**](OfferApi.md#getListingFees) | **POST** /offer/get_listing_fees | 
+[**getOffer()**](OfferApi.md#getOffer) | **GET** /offer/{offerId} | 
+[**getOffers()**](OfferApi.md#getOffers) | **GET** /offer | 
+[**publishOffer()**](OfferApi.md#publishOffer) | **POST** /offer/{offerId}/publish/ | 
+[**publishOfferByInventoryItemGroup()**](OfferApi.md#publishOfferByInventoryItemGroup) | **POST** /offer/publish_by_inventory_item_group/ | 
+[**updateOffer()**](OfferApi.md#updateOffer) | **PUT** /offer/{offerId} | 
+[**withdrawOffer()**](OfferApi.md#withdrawOffer) | **POST** /offer/{offerId}/withdraw | 
+[**withdrawOfferByInventoryItemGroup()**](OfferApi.md#withdrawOfferByInventoryItemGroup) | **POST** /offer/withdraw_by_inventory_item_group | 
 
 
 ## `bulkCreateOffer()`
@@ -57,9 +57,9 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **bulk_ebay_offer_details_with_keys** | [**\OpenAPI\EbayInventoryClient\Model\BulkEbayOfferDetailsWithKeys**](../Model/BulkEbayOfferDetailsWithKeys.md)| Details of the offer for the channel | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **bulk_ebay_offer_details_with_keys** | [**\OpenAPI\EbayInventoryClient\Model\BulkEbayOfferDetailsWithKeys**](../Model/BulkEbayOfferDetailsWithKeys.md)| Details of the offer for the channel |
 
 ### Return type
 
@@ -117,9 +117,9 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **bulk_offer** | [**\OpenAPI\EbayInventoryClient\Model\BulkOffer**](../Model/BulkOffer.md)| The base request of the &lt;strong&gt;bulkPublishOffer&lt;/strong&gt; method. | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **bulk_offer** | [**\OpenAPI\EbayInventoryClient\Model\BulkOffer**](../Model/BulkOffer.md)| The base request of the &lt;strong&gt;bulkPublishOffer&lt;/strong&gt; method. |
 
 ### Return type
 
@@ -178,10 +178,10 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **content_language** | **string**| This request header sets the natural language that will be provided in the field values of the request payload. | |
-| **ebay_offer_details_with_keys** | [**\OpenAPI\EbayInventoryClient\Model\EbayOfferDetailsWithKeys**](../Model/EbayOfferDetailsWithKeys.md)| Details of the offer for the channel | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **content_language** | **string**| This request header sets the natural language that will be provided in the field values of the request payload. |
+ **ebay_offer_details_with_keys** | [**\OpenAPI\EbayInventoryClient\Model\EbayOfferDetailsWithKeys**](../Model/EbayOfferDetailsWithKeys.md)| Details of the offer for the channel |
 
 ### Return type
 
@@ -238,9 +238,9 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **offer_id** | **string**| The unique identifier of the offer to delete. The unique identifier of the offer (&lt;strong&gt;offerId&lt;/strong&gt;) is passed in at the end of the call URI. | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **offer_id** | **string**| The unique identifier of the offer to delete. The unique identifier of the offer (&lt;strong&gt;offerId&lt;/strong&gt;) is passed in at the end of the call URI. |
 
 ### Return type
 
@@ -298,9 +298,9 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **offer_keys_with_id** | [**\OpenAPI\EbayInventoryClient\Model\OfferKeysWithId**](../Model/OfferKeysWithId.md)| List of offers that needs fee information | [optional] |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **offer_keys_with_id** | [**\OpenAPI\EbayInventoryClient\Model\OfferKeysWithId**](../Model/OfferKeysWithId.md)| List of offers that needs fee information | [optional]
 
 ### Return type
 
@@ -358,9 +358,9 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **offer_id** | **string**| The unique identifier of the offer that is to be retrieved. | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **offer_id** | **string**| The unique identifier of the offer that is to be retrieved. |
 
 ### Return type
 
@@ -422,13 +422,13 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **format** | **string**| This enumeration value sets the listing format for the offer. This query parameter will be passed in if the seller only wants to see offers in this specified listing format. | [optional] |
-| **limit** | **string**| The value passed in this query parameter sets the maximum number of records to return per page of data. Although this field is a string, the value passed in this field should be a positive integer value. If this query parameter is not set, up to 100 records will be returned on each page of results. | [optional] |
-| **marketplace_id** | **string**| The unique identifier of the eBay marketplace. This query parameter will be passed in if the seller only wants to see the product&#39;s offers on a specific eBay marketplace.&lt;br /&gt;&lt;br /&gt;&lt;span class&#x3D;\&quot;tablenote\&quot;&gt;&lt;strong&gt;Note:&lt;/strong&gt; At this time, the same SKU value can not be offered across multiple eBay marketplaces, so the &lt;strong&gt;marketplace_id&lt;/strong&gt; query parameter currently does not have any practical use for this call.&lt;/span&gt; | [optional] |
-| **offset** | **string**| The value passed in this query parameter sets the page number to retrieve. Although this field is a string, the value passed in this field should be a integer value equal to or greater than &lt;code&gt;0&lt;/code&gt;. The first page of records has a value of &lt;code&gt;0&lt;/code&gt;, the second page of records has a value of &lt;code&gt;1&lt;/code&gt;, and so on. If this query parameter is not set, its value defaults to &lt;code&gt;0&lt;/code&gt;, and the first page of records is returned. | [optional] |
-| **sku** | **string**| The seller-defined SKU value is passed in as a query parameter. All offers associated with this product are returned in the response.&lt;br/&gt;&lt;br/&gt; &lt;strong&gt;Max length&lt;/strong&gt;: 50. | [optional] |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **format** | **string**| This enumeration value sets the listing format for the offer. This query parameter will be passed in if the seller only wants to see offers in this specified listing format. | [optional]
+ **limit** | **string**| The value passed in this query parameter sets the maximum number of records to return per page of data. Although this field is a string, the value passed in this field should be a positive integer value. If this query parameter is not set, up to 100 records will be returned on each page of results. | [optional]
+ **marketplace_id** | **string**| The unique identifier of the eBay marketplace. This query parameter will be passed in if the seller only wants to see the product&#39;s offers on a specific eBay marketplace.&lt;br /&gt;&lt;br /&gt;&lt;span class&#x3D;\&quot;tablenote\&quot;&gt;&lt;strong&gt;Note:&lt;/strong&gt; At this time, the same SKU value can not be offered across multiple eBay marketplaces, so the &lt;strong&gt;marketplace_id&lt;/strong&gt; query parameter currently does not have any practical use for this call.&lt;/span&gt; | [optional]
+ **offset** | **string**| The value passed in this query parameter sets the page number to retrieve. Although this field is a string, the value passed in this field should be a integer value equal to or greater than &lt;code&gt;0&lt;/code&gt;. The first page of records has a value of &lt;code&gt;0&lt;/code&gt;, the second page of records has a value of &lt;code&gt;1&lt;/code&gt;, and so on. If this query parameter is not set, its value defaults to &lt;code&gt;0&lt;/code&gt;, and the first page of records is returned. | [optional]
+ **sku** | **string**| The seller-defined SKU value is passed in as a query parameter. All offers associated with this product are returned in the response.&lt;br/&gt;&lt;br/&gt; &lt;strong&gt;Max length&lt;/strong&gt;: 50. | [optional]
 
 ### Return type
 
@@ -486,9 +486,9 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **offer_id** | **string**| The unique identifier of the offer that is to be published. | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **offer_id** | **string**| The unique identifier of the offer that is to be published. |
 
 ### Return type
 
@@ -546,9 +546,9 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **publish_by_inventory_item_group_request** | [**\OpenAPI\EbayInventoryClient\Model\PublishByInventoryItemGroupRequest**](../Model/PublishByInventoryItemGroupRequest.md)| The identifier of the inventory item group to publish and the eBay marketplace where the listing will be published is needed in the request payload. | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **publish_by_inventory_item_group_request** | [**\OpenAPI\EbayInventoryClient\Model\PublishByInventoryItemGroupRequest**](../Model/PublishByInventoryItemGroupRequest.md)| The identifier of the inventory item group to publish and the eBay marketplace where the listing will be published is needed in the request payload. |
 
 ### Return type
 
@@ -608,11 +608,11 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **content_language** | **string**| This request header sets the natural language that will be provided in the field values of the request payload. | |
-| **offer_id** | **string**| The unique identifier of the offer that is being updated. This identifier is passed in at the end of the call URI. | |
-| **ebay_offer_details_with_id** | [**\OpenAPI\EbayInventoryClient\Model\EbayOfferDetailsWithId**](../Model/EbayOfferDetailsWithId.md)| Details of the offer for the channel | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **content_language** | **string**| This request header sets the natural language that will be provided in the field values of the request payload. |
+ **offer_id** | **string**| The unique identifier of the offer that is being updated. This identifier is passed in at the end of the call URI. |
+ **ebay_offer_details_with_id** | [**\OpenAPI\EbayInventoryClient\Model\EbayOfferDetailsWithId**](../Model/EbayOfferDetailsWithId.md)| Details of the offer for the channel |
 
 ### Return type
 
@@ -670,9 +670,9 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **offer_id** | **string**| The unique identifier of the offer that is to be withdrawn. This value is passed into the path of the call URI. | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **offer_id** | **string**| The unique identifier of the offer that is to be withdrawn. This value is passed into the path of the call URI. |
 
 ### Return type
 
@@ -729,9 +729,9 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **withdraw_by_inventory_item_group_request** | [**\OpenAPI\EbayInventoryClient\Model\WithdrawByInventoryItemGroupRequest**](../Model/WithdrawByInventoryItemGroupRequest.md)| The base request of the &lt;strong&gt;withdrawOfferByInventoryItemGroup&lt;/strong&gt; call. | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **withdraw_by_inventory_item_group_request** | [**\OpenAPI\EbayInventoryClient\Model\WithdrawByInventoryItemGroupRequest**](../Model/WithdrawByInventoryItemGroupRequest.md)| The base request of the &lt;strong&gt;withdrawOfferByInventoryItemGroup&lt;/strong&gt; call. |
 
 ### Return type
 

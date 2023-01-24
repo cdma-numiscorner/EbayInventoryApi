@@ -1,12 +1,12 @@
 # OpenAPI\EbayInventoryClient\InventoryItemGroupApi
 
-All URIs are relative to https://api.ebay.com/sell/inventory/v1, except if the operation defines another base path.
+All URIs are relative to https://api.ebay.com/sell/inventory/v1.
 
-| Method | HTTP request | Description |
-| ------------- | ------------- | ------------- |
-| [**createOrReplaceInventoryItemGroup()**](InventoryItemGroupApi.md#createOrReplaceInventoryItemGroup) | **PUT** /inventory_item_group/{inventoryItemGroupKey} |  |
-| [**deleteInventoryItemGroup()**](InventoryItemGroupApi.md#deleteInventoryItemGroup) | **DELETE** /inventory_item_group/{inventoryItemGroupKey} |  |
-| [**getInventoryItemGroup()**](InventoryItemGroupApi.md#getInventoryItemGroup) | **GET** /inventory_item_group/{inventoryItemGroupKey} |  |
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**createOrReplaceInventoryItemGroup()**](InventoryItemGroupApi.md#createOrReplaceInventoryItemGroup) | **PUT** /inventory_item_group/{inventoryItemGroupKey} | 
+[**deleteInventoryItemGroup()**](InventoryItemGroupApi.md#deleteInventoryItemGroup) | **DELETE** /inventory_item_group/{inventoryItemGroupKey} | 
+[**getInventoryItemGroup()**](InventoryItemGroupApi.md#getInventoryItemGroup) | **GET** /inventory_item_group/{inventoryItemGroupKey} | 
 
 
 ## `createOrReplaceInventoryItemGroup()`
@@ -50,11 +50,11 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **content_language** | **string**| This request header sets the natural language that will be provided in the field values of the request payload. | |
-| **inventory_item_group_key** | **string**| Unique identifier of the inventory item group. This identifier is supplied by the seller. The &lt;strong&gt;inventoryItemGroupKey&lt;/strong&gt; value for the inventory item group to create/update is passed in at the end of the call URI. This value cannot be changed once it is set. | |
-| **inventory_item_group** | [**\OpenAPI\EbayInventoryClient\Model\InventoryItemGroup**](../Model/InventoryItemGroup.md)| Details of the inventory Item Group | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **content_language** | **string**| This request header sets the natural language that will be provided in the field values of the request payload. |
+ **inventory_item_group_key** | **string**| Unique identifier of the inventory item group. This identifier is supplied by the seller. The &lt;strong&gt;inventoryItemGroupKey&lt;/strong&gt; value for the inventory item group to create/update is passed in at the end of the call URI. This value cannot be changed once it is set. |
+ **inventory_item_group** | [**\OpenAPI\EbayInventoryClient\Model\InventoryItemGroup**](../Model/InventoryItemGroup.md)| Details of the inventory Item Group |
 
 ### Return type
 
@@ -111,9 +111,9 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **inventory_item_group_key** | **string**| The unique identifier of an inventory item group. This value is assigned by the seller when an inventory item group is created. The &lt;strong&gt;inventoryItemGroupKey&lt;/strong&gt; value for the inventory item group to delete is passed in at the end of the call URI. | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **inventory_item_group_key** | **string**| The unique identifier of an inventory item group. This value is assigned by the seller when an inventory item group is created. The &lt;strong&gt;inventoryItemGroupKey&lt;/strong&gt; value for the inventory item group to delete is passed in at the end of the call URI. |
 
 ### Return type
 
@@ -171,9 +171,9 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **inventory_item_group_key** | **string**| The unique identifier of an inventory item group. This value is assigned by the seller when an inventory item group is created. The &lt;strong&gt;inventoryItemGroupKey&lt;/strong&gt; value for the inventory item group to retrieve is passed in at the end of the call URI. | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **inventory_item_group_key** | **string**| The unique identifier of an inventory item group. This value is assigned by the seller when an inventory item group is created. The &lt;strong&gt;inventoryItemGroupKey&lt;/strong&gt; value for the inventory item group to retrieve is passed in at the end of the call URI. |
 
 ### Return type
 

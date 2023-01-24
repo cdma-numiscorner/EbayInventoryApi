@@ -1,12 +1,12 @@
 # OpenAPI\EbayInventoryClient\ProductCompatibilityApi
 
-All URIs are relative to https://api.ebay.com/sell/inventory/v1, except if the operation defines another base path.
+All URIs are relative to https://api.ebay.com/sell/inventory/v1.
 
-| Method | HTTP request | Description |
-| ------------- | ------------- | ------------- |
-| [**createOrReplaceProductCompatibility()**](ProductCompatibilityApi.md#createOrReplaceProductCompatibility) | **PUT** /inventory_item/{sku}/product_compatibility |  |
-| [**deleteProductCompatibility()**](ProductCompatibilityApi.md#deleteProductCompatibility) | **DELETE** /inventory_item/{sku}/product_compatibility |  |
-| [**getProductCompatibility()**](ProductCompatibilityApi.md#getProductCompatibility) | **GET** /inventory_item/{sku}/product_compatibility |  |
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**createOrReplaceProductCompatibility()**](ProductCompatibilityApi.md#createOrReplaceProductCompatibility) | **PUT** /inventory_item/{sku}/product_compatibility | 
+[**deleteProductCompatibility()**](ProductCompatibilityApi.md#deleteProductCompatibility) | **DELETE** /inventory_item/{sku}/product_compatibility | 
+[**getProductCompatibility()**](ProductCompatibilityApi.md#getProductCompatibility) | **GET** /inventory_item/{sku}/product_compatibility | 
 
 
 ## `createOrReplaceProductCompatibility()`
@@ -50,11 +50,11 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **content_language** | **string**| This request header sets the natural language that will be provided in the field values of the request payload. | |
-| **sku** | **string**| A SKU (stock keeping unit) is an unique identifier defined by a seller for a product | |
-| **compatibility** | [**\OpenAPI\EbayInventoryClient\Model\Compatibility**](../Model/Compatibility.md)| Details of the compatibility | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **content_language** | **string**| This request header sets the natural language that will be provided in the field values of the request payload. |
+ **sku** | **string**| A SKU (stock keeping unit) is an unique identifier defined by a seller for a product |
+ **compatibility** | [**\OpenAPI\EbayInventoryClient\Model\Compatibility**](../Model/Compatibility.md)| Details of the compatibility |
 
 ### Return type
 
@@ -111,9 +111,9 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **sku** | **string**| A SKU (stock keeping unit) is an unique identifier defined by a seller for a product | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **sku** | **string**| A SKU (stock keeping unit) is an unique identifier defined by a seller for a product |
 
 ### Return type
 
@@ -171,9 +171,9 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **sku** | **string**| A SKU (stock keeping unit) is an unique identifier defined by a seller for a product | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **sku** | **string**| A SKU (stock keeping unit) is an unique identifier defined by a seller for a product |
 
 ### Return type
 

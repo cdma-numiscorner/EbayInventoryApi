@@ -1,6 +1,6 @@
 {
-    "name": "cdma-numiscorner/ebay-inventory-api",
-    "version": "2.0.2",
+    "name": "cdma-numiscorner/EbayInventoryApi",
+    "version": "1.0",
     "description": "The Inventory API is used to create and manage inventory, and then to publish and manage this inventory on an eBay marketplace. There are also methods in this API that will convert eligible, active eBay listings into the Inventory API model.",
     "keywords": [
         "openapitools",
@@ -20,16 +20,15 @@
         }
     ],
     "require": {
-        "php": "^7.4 || ^8.0",
+        "php": ">=7.2",
         "ext-curl": "*",
         "ext-json": "*",
         "ext-mbstring": "*",
-        "guzzlehttp/guzzle": "^6.4",
-        "guzzlehttp/psr7": "^1.7 || ^2.0"
+        "guzzlehttp/guzzle": "^6.2"
     },
     "require-dev": {
         "phpunit/phpunit": "^8.0 || ^9.0",
-        "friendsofphp/php-cs-fixer": "^3.5"
+        "friendsofphp/php-cs-fixer": "^2.12"
     },
     "autoload": {
         "psr-4": { "OpenAPI\\EbayInventoryClient\\" : "lib/" }

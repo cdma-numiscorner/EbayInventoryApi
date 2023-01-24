@@ -1,16 +1,16 @@
 # OpenAPI\EbayInventoryClient\InventoryItemApi
 
-All URIs are relative to https://api.ebay.com/sell/inventory/v1, except if the operation defines another base path.
+All URIs are relative to https://api.ebay.com/sell/inventory/v1.
 
-| Method | HTTP request | Description |
-| ------------- | ------------- | ------------- |
-| [**bulkCreateOrReplaceInventoryItem()**](InventoryItemApi.md#bulkCreateOrReplaceInventoryItem) | **POST** /bulk_create_or_replace_inventory_item |  |
-| [**bulkGetInventoryItem()**](InventoryItemApi.md#bulkGetInventoryItem) | **POST** /bulk_get_inventory_item |  |
-| [**bulkUpdatePriceQuantity()**](InventoryItemApi.md#bulkUpdatePriceQuantity) | **POST** /bulk_update_price_quantity |  |
-| [**createOrReplaceInventoryItem()**](InventoryItemApi.md#createOrReplaceInventoryItem) | **PUT** /inventory_item/{sku} |  |
-| [**deleteInventoryItem()**](InventoryItemApi.md#deleteInventoryItem) | **DELETE** /inventory_item/{sku} |  |
-| [**getInventoryItem()**](InventoryItemApi.md#getInventoryItem) | **GET** /inventory_item/{sku} |  |
-| [**getInventoryItems()**](InventoryItemApi.md#getInventoryItems) | **GET** /inventory_item |  |
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**bulkCreateOrReplaceInventoryItem()**](InventoryItemApi.md#bulkCreateOrReplaceInventoryItem) | **POST** /bulk_create_or_replace_inventory_item | 
+[**bulkGetInventoryItem()**](InventoryItemApi.md#bulkGetInventoryItem) | **POST** /bulk_get_inventory_item | 
+[**bulkUpdatePriceQuantity()**](InventoryItemApi.md#bulkUpdatePriceQuantity) | **POST** /bulk_update_price_quantity | 
+[**createOrReplaceInventoryItem()**](InventoryItemApi.md#createOrReplaceInventoryItem) | **PUT** /inventory_item/{sku} | 
+[**deleteInventoryItem()**](InventoryItemApi.md#deleteInventoryItem) | **DELETE** /inventory_item/{sku} | 
+[**getInventoryItem()**](InventoryItemApi.md#getInventoryItem) | **GET** /inventory_item/{sku} | 
+[**getInventoryItems()**](InventoryItemApi.md#getInventoryItems) | **GET** /inventory_item | 
 
 
 ## `bulkCreateOrReplaceInventoryItem()`
@@ -52,9 +52,9 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **bulk_inventory_item** | [**\OpenAPI\EbayInventoryClient\Model\BulkInventoryItem**](../Model/BulkInventoryItem.md)| Details of the inventories with sku and locale | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **bulk_inventory_item** | [**\OpenAPI\EbayInventoryClient\Model\BulkInventoryItem**](../Model/BulkInventoryItem.md)| Details of the inventories with sku and locale |
 
 ### Return type
 
@@ -112,9 +112,9 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **bulk_get_inventory_item** | [**\OpenAPI\EbayInventoryClient\Model\BulkGetInventoryItem**](../Model/BulkGetInventoryItem.md)| Details of the inventories with sku and locale | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **bulk_get_inventory_item** | [**\OpenAPI\EbayInventoryClient\Model\BulkGetInventoryItem**](../Model/BulkGetInventoryItem.md)| Details of the inventories with sku and locale |
 
 ### Return type
 
@@ -172,9 +172,9 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **bulk_price_quantity** | [**\OpenAPI\EbayInventoryClient\Model\BulkPriceQuantity**](../Model/BulkPriceQuantity.md)| Price and allocation details for the given SKU and Marketplace | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **bulk_price_quantity** | [**\OpenAPI\EbayInventoryClient\Model\BulkPriceQuantity**](../Model/BulkPriceQuantity.md)| Price and allocation details for the given SKU and Marketplace |
 
 ### Return type
 
@@ -234,11 +234,11 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **content_language** | **string**| This request header sets the natural language that will be provided in the field values of the request payload. | |
-| **sku** | **string**| The seller-defined SKU value for the inventory item is required whether the seller is creating a new inventory item, or updating an existing inventory item. This SKU value is passed in at the end of the call URI. SKU values must be unique across the seller&#39;s inventory. &lt;br/&gt;&lt;br/&gt; &lt;strong&gt;Max length&lt;/strong&gt;: 50. | |
-| **inventory_item** | [**\OpenAPI\EbayInventoryClient\Model\InventoryItem**](../Model/InventoryItem.md)| Details of the inventory item record. | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **content_language** | **string**| This request header sets the natural language that will be provided in the field values of the request payload. |
+ **sku** | **string**| The seller-defined SKU value for the inventory item is required whether the seller is creating a new inventory item, or updating an existing inventory item. This SKU value is passed in at the end of the call URI. SKU values must be unique across the seller&#39;s inventory. &lt;br/&gt;&lt;br/&gt; &lt;strong&gt;Max length&lt;/strong&gt;: 50. |
+ **inventory_item** | [**\OpenAPI\EbayInventoryClient\Model\InventoryItem**](../Model/InventoryItem.md)| Details of the inventory item record. |
 
 ### Return type
 
@@ -295,9 +295,9 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **sku** | **string**| This is the seller-defined SKU value of the product whose inventory item record you wish to delete.&lt;br/&gt;&lt;br/&gt;&lt;strong&gt;Max length&lt;/strong&gt;: 50. | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **sku** | **string**| This is the seller-defined SKU value of the product whose inventory item record you wish to delete.&lt;br/&gt;&lt;br/&gt;&lt;strong&gt;Max length&lt;/strong&gt;: 50. |
 
 ### Return type
 
@@ -355,9 +355,9 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **sku** | **string**| This is the seller-defined SKU value of the product whose inventory item record you wish to retrieve.&lt;br/&gt;&lt;br/&gt;&lt;strong&gt;Max length&lt;/strong&gt;: 50. | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **sku** | **string**| This is the seller-defined SKU value of the product whose inventory item record you wish to retrieve.&lt;br/&gt;&lt;br/&gt;&lt;strong&gt;Max length&lt;/strong&gt;: 50. |
 
 ### Return type
 
@@ -416,10 +416,10 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **limit** | **string**| The value passed in this query parameter sets the maximum number of records to return per page of data. Although this field is a string, the value passed in this field should be an integer  from &lt;code&gt;1&lt;/code&gt; to &lt;code&gt;100&lt;/code&gt;. If this query parameter is not set, up to 100 records will be returned on each page of results.&lt;br/&gt;&lt;br/&gt;&lt;strong&gt;Min&lt;/strong&gt;: 1, &lt;strong&gt;Max&lt;/strong&gt;: 100 | [optional] |
-| **offset** | **string**| The value passed in this query parameter sets the page number to retrieve. The first page of records has a value of &lt;code&gt;0&lt;/code&gt;, the second page of records has a value of &lt;code&gt;1&lt;/code&gt;, and so on. If this query parameter is not set, its value defaults to &lt;code&gt;0&lt;/code&gt;, and the first page of records is returned. | [optional] |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **limit** | **string**| The value passed in this query parameter sets the maximum number of records to return per page of data. Although this field is a string, the value passed in this field should be an integer  from &lt;code&gt;1&lt;/code&gt; to &lt;code&gt;100&lt;/code&gt;. If this query parameter is not set, up to 100 records will be returned on each page of results.&lt;br/&gt;&lt;br/&gt;&lt;strong&gt;Min&lt;/strong&gt;: 1, &lt;strong&gt;Max&lt;/strong&gt;: 100 | [optional]
+ **offset** | **string**| The value passed in this query parameter sets the page number to retrieve. The first page of records has a value of &lt;code&gt;0&lt;/code&gt;, the second page of records has a value of &lt;code&gt;1&lt;/code&gt;, and so on. If this query parameter is not set, its value defaults to &lt;code&gt;0&lt;/code&gt;, and the first page of records is returned. | [optional]
 
 ### Return type
 
