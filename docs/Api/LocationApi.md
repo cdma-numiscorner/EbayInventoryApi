@@ -1,16 +1,16 @@
 # OpenAPI\EbayInventoryClient\LocationApi
 
-All URIs are relative to https://api.ebay.com/sell/inventory/v1, except if the operation defines another base path.
+All URIs are relative to https://api.ebay.com/sell/inventory/v1.
 
-| Method | HTTP request | Description |
-| ------------- | ------------- | ------------- |
-| [**createInventoryLocation()**](LocationApi.md#createInventoryLocation) | **POST** /location/{merchantLocationKey} |  |
-| [**deleteInventoryLocation()**](LocationApi.md#deleteInventoryLocation) | **DELETE** /location/{merchantLocationKey} |  |
-| [**disableInventoryLocation()**](LocationApi.md#disableInventoryLocation) | **POST** /location/{merchantLocationKey}/disable |  |
-| [**enableInventoryLocation()**](LocationApi.md#enableInventoryLocation) | **POST** /location/{merchantLocationKey}/enable |  |
-| [**getInventoryLocation()**](LocationApi.md#getInventoryLocation) | **GET** /location/{merchantLocationKey} |  |
-| [**getInventoryLocations()**](LocationApi.md#getInventoryLocations) | **GET** /location |  |
-| [**updateInventoryLocation()**](LocationApi.md#updateInventoryLocation) | **POST** /location/{merchantLocationKey}/update_location_details |  |
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**createInventoryLocation()**](LocationApi.md#createInventoryLocation) | **POST** /location/{merchantLocationKey} | 
+[**deleteInventoryLocation()**](LocationApi.md#deleteInventoryLocation) | **DELETE** /location/{merchantLocationKey} | 
+[**disableInventoryLocation()**](LocationApi.md#disableInventoryLocation) | **POST** /location/{merchantLocationKey}/disable | 
+[**enableInventoryLocation()**](LocationApi.md#enableInventoryLocation) | **POST** /location/{merchantLocationKey}/enable | 
+[**getInventoryLocation()**](LocationApi.md#getInventoryLocation) | **GET** /location/{merchantLocationKey} | 
+[**getInventoryLocations()**](LocationApi.md#getInventoryLocations) | **GET** /location | 
+[**updateInventoryLocation()**](LocationApi.md#updateInventoryLocation) | **POST** /location/{merchantLocationKey}/update_location_details | 
 
 
 ## `createInventoryLocation()`
@@ -52,10 +52,10 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **merchant_location_key** | **string**| A unique, merchant-defined key (ID) for an inventory location. This unique identifier, or key, is used in other Inventory API calls to identify an inventory location. &lt;br/&gt;&lt;br/&gt;&lt;b&gt;Max length&lt;/b&gt;: 36 | |
-| **inventory_location_full** | [**\OpenAPI\EbayInventoryClient\Model\InventoryLocationFull**](../Model/InventoryLocationFull.md)| Inventory Location details | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **merchant_location_key** | **string**| A unique, merchant-defined key (ID) for an inventory location. This unique identifier, or key, is used in other Inventory API calls to identify an inventory location. &lt;br/&gt;&lt;br/&gt;&lt;b&gt;Max length&lt;/b&gt;: 36 |
+ **inventory_location_full** | [**\OpenAPI\EbayInventoryClient\Model\InventoryLocationFull**](../Model/InventoryLocationFull.md)| Inventory Location details |
 
 ### Return type
 
@@ -112,9 +112,9 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **merchant_location_key** | **string**| A unique merchant-defined key (ID) for an inventory location. This value is passed in at the end of the call URI to indicate the inventory location to be deleted. &lt;br/&gt;&lt;br/&gt;&lt;b&gt;Max length&lt;/b&gt;: 36 | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **merchant_location_key** | **string**| A unique merchant-defined key (ID) for an inventory location. This value is passed in at the end of the call URI to indicate the inventory location to be deleted. &lt;br/&gt;&lt;br/&gt;&lt;b&gt;Max length&lt;/b&gt;: 36 |
 
 ### Return type
 
@@ -172,9 +172,9 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **merchant_location_key** | **string**| A unique merchant-defined key (ID) for an inventory location. This value is passed in through the call URI to disable the specified inventory location. &lt;br/&gt;&lt;br/&gt;&lt;b&gt;Max length&lt;/b&gt;: 36 | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **merchant_location_key** | **string**| A unique merchant-defined key (ID) for an inventory location. This value is passed in through the call URI to disable the specified inventory location. &lt;br/&gt;&lt;br/&gt;&lt;b&gt;Max length&lt;/b&gt;: 36 |
 
 ### Return type
 
@@ -232,9 +232,9 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **merchant_location_key** | **string**| A unique merchant-defined key (ID) for an inventory location. This value is passed in through the call URI to specify the disabled inventory location to enable. &lt;br/&gt;&lt;br/&gt;&lt;b&gt;Max length&lt;/b&gt;: 36 | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **merchant_location_key** | **string**| A unique merchant-defined key (ID) for an inventory location. This value is passed in through the call URI to specify the disabled inventory location to enable. &lt;br/&gt;&lt;br/&gt;&lt;b&gt;Max length&lt;/b&gt;: 36 |
 
 ### Return type
 
@@ -292,9 +292,9 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **merchant_location_key** | **string**| A unique merchant-defined key (ID) for an inventory location. This value is passed in at the end of the call URI to specify the inventory location to retrieve. &lt;br/&gt;&lt;br/&gt;&lt;b&gt;Max length&lt;/b&gt;: 36 | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **merchant_location_key** | **string**| A unique merchant-defined key (ID) for an inventory location. This value is passed in at the end of the call URI to specify the inventory location to retrieve. &lt;br/&gt;&lt;br/&gt;&lt;b&gt;Max length&lt;/b&gt;: 36 |
 
 ### Return type
 
@@ -353,10 +353,10 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **limit** | **string**| The value passed in this query parameter sets the maximum number of records to return per page of data. Although this field is a string, the value passed in this field should be a positive integer value. If this query parameter is not set, up to 100 records will be returned on each page of results. &lt;br/&gt;&lt;br/&gt; &lt;strong&gt;Min&lt;/strong&gt;: 1 | [optional] |
-| **offset** | **string**| Specifies the number of locations to skip in the result set before returning the first location in the paginated response.  &lt;p&gt;Combine &lt;b&gt;offset&lt;/b&gt; with the &lt;b&gt;limit&lt;/b&gt; query parameter to control the items returned in the response. For example, if you supply an &lt;b&gt;offset&lt;/b&gt; of &lt;code&gt;0&lt;/code&gt; and a &lt;b&gt;limit&lt;/b&gt; of &lt;code&gt;10&lt;/code&gt;, the first page of the response contains the first 10 items from the complete list of items retrieved by the call. If &lt;b&gt;offset&lt;/b&gt; is &lt;code&gt;10&lt;/code&gt; and &lt;b&gt;limit&lt;/b&gt; is &lt;code&gt;20&lt;/code&gt;, the first page of the response contains items 11-30 from the complete result set.&lt;/p&gt; &lt;p&gt;&lt;b&gt;Default:&lt;/b&gt; 0&lt;/p&gt; | [optional] |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **limit** | **string**| The value passed in this query parameter sets the maximum number of records to return per page of data. Although this field is a string, the value passed in this field should be a positive integer value. If this query parameter is not set, up to 100 records will be returned on each page of results. &lt;br/&gt;&lt;br/&gt; &lt;strong&gt;Min&lt;/strong&gt;: 1 | [optional]
+ **offset** | **string**| Specifies the number of locations to skip in the result set before returning the first location in the paginated response.  &lt;p&gt;Combine &lt;b&gt;offset&lt;/b&gt; with the &lt;b&gt;limit&lt;/b&gt; query parameter to control the items returned in the response. For example, if you supply an &lt;b&gt;offset&lt;/b&gt; of &lt;code&gt;0&lt;/code&gt; and a &lt;b&gt;limit&lt;/b&gt; of &lt;code&gt;10&lt;/code&gt;, the first page of the response contains the first 10 items from the complete list of items retrieved by the call. If &lt;b&gt;offset&lt;/b&gt; is &lt;code&gt;10&lt;/code&gt; and &lt;b&gt;limit&lt;/b&gt; is &lt;code&gt;20&lt;/code&gt;, the first page of the response contains items 11-30 from the complete result set.&lt;/p&gt; &lt;p&gt;&lt;b&gt;Default:&lt;/b&gt; 0&lt;/p&gt; | [optional]
 
 ### Return type
 
@@ -414,10 +414,10 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **merchant_location_key** | **string**| A unique merchant-defined key (ID) for an inventory location. This value is passed in the call URI to indicate the inventory location to be updated. &lt;br/&gt;&lt;br/&gt;&lt;b&gt;Max length&lt;/b&gt;: 36 | |
-| **inventory_location** | [**\OpenAPI\EbayInventoryClient\Model\InventoryLocation**](../Model/InventoryLocation.md)| The inventory location details to be updated (other than the address and geo co-ordinates). | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **merchant_location_key** | **string**| A unique merchant-defined key (ID) for an inventory location. This value is passed in the call URI to indicate the inventory location to be updated. &lt;br/&gt;&lt;br/&gt;&lt;b&gt;Max length&lt;/b&gt;: 36 |
+ **inventory_location** | [**\OpenAPI\EbayInventoryClient\Model\InventoryLocation**](../Model/InventoryLocation.md)| The inventory location details to be updated (other than the address and geo co-ordinates). |
 
 ### Return type
 

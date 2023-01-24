@@ -1,10 +1,10 @@
 # OpenAPI\EbayInventoryClient\ListingApi
 
-All URIs are relative to https://api.ebay.com/sell/inventory/v1, except if the operation defines another base path.
+All URIs are relative to https://api.ebay.com/sell/inventory/v1.
 
-| Method | HTTP request | Description |
-| ------------- | ------------- | ------------- |
-| [**bulkMigrateListing()**](ListingApi.md#bulkMigrateListing) | **POST** /bulk_migrate_listing |  |
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**bulkMigrateListing()**](ListingApi.md#bulkMigrateListing) | **POST** /bulk_migrate_listing | 
 
 
 ## `bulkMigrateListing()`
@@ -46,9 +46,9 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **bulk_migrate_listing** | [**\OpenAPI\EbayInventoryClient\Model\BulkMigrateListing**](../Model/BulkMigrateListing.md)| Details of the listings that needs to be migrated into Inventory | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **bulk_migrate_listing** | [**\OpenAPI\EbayInventoryClient\Model\BulkMigrateListing**](../Model/BulkMigrateListing.md)| Details of the listings that needs to be migrated into Inventory |
 
 ### Return type
 
