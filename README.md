@@ -29,6 +29,12 @@ To install the bindings via [Composer](https://getcomposer.org/), add the follow
 
 Then run `composer install`
 
+## Regenerate Client
+
+```
+docker run --rm -v "${PWD}:/local" openapitools/openapi-generator-cli:v5.0.1 generate     -i https://developer.ebay.com/api-docs/master/sell/inventory/openapi/3/sell_inventory_v1_oas3.yaml     -g php  --git-user-id cdma-numiscorner --git-host github.com --git-repo-id ebay-inventory-api --invoker-package 'OpenAPI\EbayInventoryClient' --artifact-version 1.0 --release-note "Initial commit" -o /local ```
+
+
 ### Manual Installation
 
 Download the files and include `autoload.php`:
