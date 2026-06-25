@@ -12,12 +12,12 @@ Method | HTTP request | Description
 ## `createOrReplaceProductCompatibility()`
 
 ```php
-createOrReplaceProductCompatibility($content_language, $sku, $compatibility): \OpenAPI\EbayInventoryClient\Model\BaseResponse
+createOrReplaceProductCompatibility($content_language, $sku, $content_type, $compatibility): \OpenAPI\EbayInventoryClient\Model\BaseResponse
 ```
 
 
 
-This call is used by the seller to create or replace a list of products that are compatible with the inventory item. The inventory item is identified with a SKU value in the URI. Product compatibility is currently only applicable to motor vehicle parts and accessory categories, but more categories may be supported in the future.<br /><br /><p>In addition to the <code>authorization</code> header, which is required for all eBay REST API calls, the <strong>createOrReplaceProductCompatibility</strong> call also requires the <code>Content-Language</code> header, that sets the natural language that will be used in the field values of the request payload. For US English, the code value passed in this header should be <code>en-US</code>. To view other supported <code>Content-Language</code> values, and to read more about all supported HTTP headers for eBay REST API calls, see the <a href=\"/api-docs/static/rest-request-components.html#HTTP\">HTTP request headers</a> topic in the <strong>Using eBay RESTful APIs</strong> document.</p>
+This call is used by the seller to create or replace a list of products that are compatible with the inventory item. The inventory item is identified with a SKU value in the URI. Product compatibility is currently only applicable to motor vehicle parts and accessory categories, but more categories may be supported in the future.<br><br><span class=\"tablenote\"><b>Note:</b> In addition to the <code>authorization</code> header, which is required for all Inventory API calls, this call also requires the <code>Content-Type</code> and <code>Content-Language</code> headers.</span>
 
 ### Example
 
@@ -36,12 +36,13 @@ $apiInstance = new OpenAPI\EbayInventoryClient\Api\ProductCompatibilityApi(
     new GuzzleHttp\Client(),
     $config
 );
-$content_language = 'content_language_example'; // string | This request header sets the natural language that will be provided in the field values of the request payload.
-$sku = 'sku_example'; // string | A SKU (stock keeping unit) is an unique identifier defined by a seller for a product
+$content_language = 'content_language_example'; // string | This header sets the natural language that will be used in the field values of the request payload. For example, the value passed in this header should be <code>en-US</code> for English or <code>de-DE</code> for German.
+$sku = 'sku_example'; // string | This path parameter specifies the SKU (stock keeping unit) of the inventory item associated with the compatibility list being created.<br><br>Use the <a href=\"/develop/api/sell/inventory_api#sell-inventory_api-inventory_item-getinventoryitems\" target=\"_blank \">getInventoryItems</a> method to retrieve SKU values.
+$content_type = 'content_type_example'; // string | This header indicates the format of the request body provided by the client. Its value should be set to <b>application/json</b>.
 $compatibility = new \OpenAPI\EbayInventoryClient\Model\Compatibility(); // \OpenAPI\EbayInventoryClient\Model\Compatibility | Details of the compatibility
 
 try {
-    $result = $apiInstance->createOrReplaceProductCompatibility($content_language, $sku, $compatibility);
+    $result = $apiInstance->createOrReplaceProductCompatibility($content_language, $sku, $content_type, $compatibility);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ProductCompatibilityApi->createOrReplaceProductCompatibility: ', $e->getMessage(), PHP_EOL;
@@ -52,8 +53,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **content_language** | **string**| This request header sets the natural language that will be provided in the field values of the request payload. |
- **sku** | **string**| A SKU (stock keeping unit) is an unique identifier defined by a seller for a product |
+ **content_language** | **string**| This header sets the natural language that will be used in the field values of the request payload. For example, the value passed in this header should be &lt;code&gt;en-US&lt;/code&gt; for English or &lt;code&gt;de-DE&lt;/code&gt; for German. |
+ **sku** | **string**| This path parameter specifies the SKU (stock keeping unit) of the inventory item associated with the compatibility list being created.&lt;br&gt;&lt;br&gt;Use the &lt;a href&#x3D;\&quot;/develop/api/sell/inventory_api#sell-inventory_api-inventory_item-getinventoryitems\&quot; target&#x3D;\&quot;_blank \&quot;&gt;getInventoryItems&lt;/a&gt; method to retrieve SKU values. |
+ **content_type** | **string**| This header indicates the format of the request body provided by the client. Its value should be set to &lt;b&gt;application/json&lt;/b&gt;. |
  **compatibility** | [**\OpenAPI\EbayInventoryClient\Model\Compatibility**](../Model/Compatibility.md)| Details of the compatibility |
 
 ### Return type
@@ -100,7 +102,7 @@ $apiInstance = new OpenAPI\EbayInventoryClient\Api\ProductCompatibilityApi(
     new GuzzleHttp\Client(),
     $config
 );
-$sku = 'sku_example'; // string | A SKU (stock keeping unit) is an unique identifier defined by a seller for a product
+$sku = 'sku_example'; // string | This path parameter specifies the SKU (stock keeping unit) of the inventory item that is associated with the product compatibility list that is being deleted.<br><br>Use the <a href=\"/develop/api/sell/inventory_api#sell-inventory_api-inventory_item-getinventoryitems\" target=\"_blank \">getInventoryItems</a> method to retrieve SKU values.
 
 try {
     $apiInstance->deleteProductCompatibility($sku);
@@ -113,7 +115,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sku** | **string**| A SKU (stock keeping unit) is an unique identifier defined by a seller for a product |
+ **sku** | **string**| This path parameter specifies the SKU (stock keeping unit) of the inventory item that is associated with the product compatibility list that is being deleted.&lt;br&gt;&lt;br&gt;Use the &lt;a href&#x3D;\&quot;/develop/api/sell/inventory_api#sell-inventory_api-inventory_item-getinventoryitems\&quot; target&#x3D;\&quot;_blank \&quot;&gt;getInventoryItems&lt;/a&gt; method to retrieve SKU values. |
 
 ### Return type
 
@@ -126,7 +128,7 @@ void (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: `application/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -159,7 +161,7 @@ $apiInstance = new OpenAPI\EbayInventoryClient\Api\ProductCompatibilityApi(
     new GuzzleHttp\Client(),
     $config
 );
-$sku = 'sku_example'; // string | A SKU (stock keeping unit) is an unique identifier defined by a seller for a product
+$sku = 'sku_example'; // string | This path parameter specifies the SKU (stock keeping unit) of the inventory item associated with the product compatibility list being retrieved.<br><br>Use the <a href=\"/develop/api/sell/inventory_api#sell-inventory_api-inventory_item-getinventoryitems\" target=\"_blank \">getInventoryItems</a> method to retrieve SKU values.
 
 try {
     $result = $apiInstance->getProductCompatibility($sku);
@@ -173,7 +175,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sku** | **string**| A SKU (stock keeping unit) is an unique identifier defined by a seller for a product |
+ **sku** | **string**| This path parameter specifies the SKU (stock keeping unit) of the inventory item associated with the product compatibility list being retrieved.&lt;br&gt;&lt;br&gt;Use the &lt;a href&#x3D;\&quot;/develop/api/sell/inventory_api#sell-inventory_api-inventory_item-getinventoryitems\&quot; target&#x3D;\&quot;_blank \&quot;&gt;getInventoryItems&lt;/a&gt; method to retrieve SKU values. |
 
 ### Return type
 

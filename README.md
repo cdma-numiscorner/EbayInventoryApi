@@ -18,22 +18,16 @@ To install the bindings via [Composer](https://getcomposer.org/), add the follow
   "repositories": [
     {
       "type": "vcs",
-      "url": "https://github.com/cdma-numiscorner/EbayInventoryApi.git"
+      "url": "https://github.com/GIT_USER_ID/GIT_REPO_ID.git"
     }
   ],
   "require": {
-    "cdma-numiscorner/EbayInventoryApi": "*@dev"
+    "GIT_USER_ID/GIT_REPO_ID": "*@dev"
   }
 }
 ```
 
 Then run `composer install`
-
-## Regenerate Client
-
-```
-docker run --rm -v "${PWD}:/local" openapitools/openapi-generator-cli:v5.0.1 generate     -i https://developer.ebay.com/api-docs/master/sell/inventory/openapi/3/sell_inventory_v1_oas3.yaml     -g php  --git-user-id cdma-numiscorner --git-host github.com --git-repo-id ebay-inventory-api --invoker-package 'OpenAPI\EbayInventoryClient' --artifact-version 1.0 --release-note "Initial commit" -o /local ```
-
 
 ### Manual Installation
 
@@ -64,10 +58,12 @@ $apiInstance = new OpenAPI\EbayInventoryClient\Api\InventoryItemApi(
     new GuzzleHttp\Client(),
     $config
 );
+$content_type = 'content_type_example'; // string | This header indicates the format of the request body provided by the client. Its value should be set to <b>application/json</b>.
+$content_language = 'content_language_example'; // string | This header sets the natural language that will be used in the field values of the request payload. For example, the value passed in this header should be <code>en-US</code> for English or <code>de-DE</code> for German.
 $bulk_inventory_item = new \OpenAPI\EbayInventoryClient\Model\BulkInventoryItem(); // \OpenAPI\EbayInventoryClient\Model\BulkInventoryItem | Details of the inventories with sku and locale
 
 try {
-    $result = $apiInstance->bulkCreateOrReplaceInventoryItem($bulk_inventory_item);
+    $result = $apiInstance->bulkCreateOrReplaceInventoryItem($content_type, $content_language, $bulk_inventory_item);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling InventoryItemApi->bulkCreateOrReplaceInventoryItem: ', $e->getMessage(), PHP_EOL;
@@ -92,6 +88,9 @@ Class | Method | HTTP request | Description
 *InventoryItemGroupApi* | [**deleteInventoryItemGroup**](docs/Api/InventoryItemGroupApi.md#deleteinventoryitemgroup) | **DELETE** /inventory_item_group/{inventoryItemGroupKey} | 
 *InventoryItemGroupApi* | [**getInventoryItemGroup**](docs/Api/InventoryItemGroupApi.md#getinventoryitemgroup) | **GET** /inventory_item_group/{inventoryItemGroupKey} | 
 *ListingApi* | [**bulkMigrateListing**](docs/Api/ListingApi.md#bulkmigratelisting) | **POST** /bulk_migrate_listing | 
+*ListingApi* | [**createOrReplaceSkuLocationMapping**](docs/Api/ListingApi.md#createorreplaceskulocationmapping) | **PUT** /listing/{listingId}/sku/{sku}/locations | 
+*ListingApi* | [**deleteSkuLocationMapping**](docs/Api/ListingApi.md#deleteskulocationmapping) | **DELETE** /listing/{listingId}/sku/{sku}/locations | 
+*ListingApi* | [**getSkuLocationMapping**](docs/Api/ListingApi.md#getskulocationmapping) | **GET** /listing/{listingId}/sku/{sku}/locations | 
 *LocationApi* | [**createInventoryLocation**](docs/Api/LocationApi.md#createinventorylocation) | **POST** /location/{merchantLocationKey} | 
 *LocationApi* | [**deleteInventoryLocation**](docs/Api/LocationApi.md#deleteinventorylocation) | **DELETE** /location/{merchantLocationKey} | 
 *LocationApi* | [**disableInventoryLocation**](docs/Api/LocationApi.md#disableinventorylocation) | **POST** /location/{merchantLocationKey}/disable | 
@@ -106,8 +105,8 @@ Class | Method | HTTP request | Description
 *OfferApi* | [**getListingFees**](docs/Api/OfferApi.md#getlistingfees) | **POST** /offer/get_listing_fees | 
 *OfferApi* | [**getOffer**](docs/Api/OfferApi.md#getoffer) | **GET** /offer/{offerId} | 
 *OfferApi* | [**getOffers**](docs/Api/OfferApi.md#getoffers) | **GET** /offer | 
-*OfferApi* | [**publishOffer**](docs/Api/OfferApi.md#publishoffer) | **POST** /offer/{offerId}/publish/ | 
-*OfferApi* | [**publishOfferByInventoryItemGroup**](docs/Api/OfferApi.md#publishofferbyinventoryitemgroup) | **POST** /offer/publish_by_inventory_item_group/ | 
+*OfferApi* | [**publishOffer**](docs/Api/OfferApi.md#publishoffer) | **POST** /offer/{offerId}/publish | 
+*OfferApi* | [**publishOfferByInventoryItemGroup**](docs/Api/OfferApi.md#publishofferbyinventoryitemgroup) | **POST** /offer/publish_by_inventory_item_group | 
 *OfferApi* | [**updateOffer**](docs/Api/OfferApi.md#updateoffer) | **PUT** /offer/{offerId} | 
 *OfferApi* | [**withdrawOffer**](docs/Api/OfferApi.md#withdrawoffer) | **POST** /offer/{offerId}/withdraw | 
 *OfferApi* | [**withdrawOfferByInventoryItemGroup**](docs/Api/OfferApi.md#withdrawofferbyinventoryitemgroup) | **POST** /offer/withdraw_by_inventory_item_group | 
@@ -121,6 +120,7 @@ Class | Method | HTTP request | Description
 - [Amount](docs/Model/Amount.md)
 - [Availability](docs/Model/Availability.md)
 - [AvailabilityDistribution](docs/Model/AvailabilityDistribution.md)
+- [AvailabilityTypeEnum](docs/Model/AvailabilityTypeEnum.md)
 - [AvailabilityWithAll](docs/Model/AvailabilityWithAll.md)
 - [BaseResponse](docs/Model/BaseResponse.md)
 - [BestOffer](docs/Model/BestOffer.md)
@@ -139,20 +139,33 @@ Class | Method | HTTP request | Description
 - [Charity](docs/Model/Charity.md)
 - [Compatibility](docs/Model/Compatibility.md)
 - [CompatibleProduct](docs/Model/CompatibleProduct.md)
+- [ConditionDescriptor](docs/Model/ConditionDescriptor.md)
+- [ConditionEnum](docs/Model/ConditionEnum.md)
+- [CountryCodeEnum](docs/Model/CountryCodeEnum.md)
+- [CountryPolicy](docs/Model/CountryPolicy.md)
+- [CurrencyCodeEnum](docs/Model/CurrencyCodeEnum.md)
+- [DayOfWeekEnum](docs/Model/DayOfWeekEnum.md)
 - [Dimension](docs/Model/Dimension.md)
+- [Document](docs/Model/Document.md)
 - [EbayOfferDetailsWithAll](docs/Model/EbayOfferDetailsWithAll.md)
 - [EbayOfferDetailsWithId](docs/Model/EbayOfferDetailsWithId.md)
 - [EbayOfferDetailsWithKeys](docs/Model/EbayOfferDetailsWithKeys.md)
+- [EnergyEfficiencyLabel](docs/Model/EnergyEfficiencyLabel.md)
 - [Error](docs/Model/Error.md)
+- [ErrorDetailV3](docs/Model/ErrorDetailV3.md)
 - [ErrorParameter](docs/Model/ErrorParameter.md)
+- [ErrorParameterV3](docs/Model/ErrorParameterV3.md)
 - [ExtendedProducerResponsibility](docs/Model/ExtendedProducerResponsibility.md)
 - [Fee](docs/Model/Fee.md)
 - [FeeSummary](docs/Model/FeeSummary.md)
 - [FeesSummaryResponse](docs/Model/FeesSummaryResponse.md)
 - [FormatAllocation](docs/Model/FormatAllocation.md)
+- [FormatTypeEnum](docs/Model/FormatTypeEnum.md)
+- [FulfillmentCenterSpecifications](docs/Model/FulfillmentCenterSpecifications.md)
 - [GeoCoordinates](docs/Model/GeoCoordinates.md)
 - [GetInventoryItem](docs/Model/GetInventoryItem.md)
 - [GetInventoryItemResponse](docs/Model/GetInventoryItemResponse.md)
+- [Hazmat](docs/Model/Hazmat.md)
 - [Interval](docs/Model/Interval.md)
 - [InventoryItem](docs/Model/InventoryItem.md)
 - [InventoryItemGroup](docs/Model/InventoryItemGroup.md)
@@ -165,13 +178,22 @@ Class | Method | HTTP request | Description
 - [InventoryLocation](docs/Model/InventoryLocation.md)
 - [InventoryLocationFull](docs/Model/InventoryLocationFull.md)
 - [InventoryLocationResponse](docs/Model/InventoryLocationResponse.md)
+- [LengthUnitOfMeasureEnum](docs/Model/LengthUnitOfMeasureEnum.md)
 - [ListingDetails](docs/Model/ListingDetails.md)
+- [ListingDurationEnum](docs/Model/ListingDurationEnum.md)
 - [ListingPolicies](docs/Model/ListingPolicies.md)
+- [ListingStatusEnum](docs/Model/ListingStatusEnum.md)
+- [LocaleEnum](docs/Model/LocaleEnum.md)
 - [Location](docs/Model/Location.md)
+- [LocationAvailabilityDetails](docs/Model/LocationAvailabilityDetails.md)
 - [LocationDetails](docs/Model/LocationDetails.md)
+- [LocationMapping](docs/Model/LocationMapping.md)
 - [LocationResponse](docs/Model/LocationResponse.md)
+- [Manufacturer](docs/Model/Manufacturer.md)
+- [MarketplaceEnum](docs/Model/MarketplaceEnum.md)
 - [MigrateListing](docs/Model/MigrateListing.md)
 - [MigrateListingResponse](docs/Model/MigrateListingResponse.md)
+- [MinimumAdvertisedPriceHandlingEnum](docs/Model/MinimumAdvertisedPriceHandlingEnum.md)
 - [NameValueList](docs/Model/NameValueList.md)
 - [OfferKeyWithId](docs/Model/OfferKeyWithId.md)
 - [OfferKeysWithId](docs/Model/OfferKeysWithId.md)
@@ -179,8 +201,11 @@ Class | Method | HTTP request | Description
 - [OfferResponse](docs/Model/OfferResponse.md)
 - [OfferResponseWithListingId](docs/Model/OfferResponseWithListingId.md)
 - [OfferSkuResponse](docs/Model/OfferSkuResponse.md)
+- [OfferStatusEnum](docs/Model/OfferStatusEnum.md)
 - [Offers](docs/Model/Offers.md)
 - [OperatingHours](docs/Model/OperatingHours.md)
+- [Overrides](docs/Model/Overrides.md)
+- [PackageTypeEnum](docs/Model/PackageTypeEnum.md)
 - [PackageWeightAndSize](docs/Model/PackageWeightAndSize.md)
 - [PickupAtLocationAvailability](docs/Model/PickupAtLocationAvailability.md)
 - [PriceQuantity](docs/Model/PriceQuantity.md)
@@ -189,18 +214,32 @@ Class | Method | HTTP request | Description
 - [Product](docs/Model/Product.md)
 - [ProductFamilyProperties](docs/Model/ProductFamilyProperties.md)
 - [ProductIdentifier](docs/Model/ProductIdentifier.md)
+- [ProductSafety](docs/Model/ProductSafety.md)
 - [PublishByInventoryItemGroupRequest](docs/Model/PublishByInventoryItemGroupRequest.md)
 - [PublishResponse](docs/Model/PublishResponse.md)
+- [RegionalProductCompliancePolicies](docs/Model/RegionalProductCompliancePolicies.md)
+- [RegionalTakeBackPolicies](docs/Model/RegionalTakeBackPolicies.md)
+- [Regulatory](docs/Model/Regulatory.md)
+- [ResponsiblePerson](docs/Model/ResponsiblePerson.md)
+- [ResponsiblePersonTypeEnum](docs/Model/ResponsiblePersonTypeEnum.md)
+- [SameDayShippingCutOffTimes](docs/Model/SameDayShippingCutOffTimes.md)
 - [ShipToLocationAvailability](docs/Model/ShipToLocationAvailability.md)
 - [ShipToLocationAvailabilityWithAll](docs/Model/ShipToLocationAvailabilityWithAll.md)
 - [ShippingCostOverride](docs/Model/ShippingCostOverride.md)
+- [ShippingServiceTypeEnum](docs/Model/ShippingServiceTypeEnum.md)
+- [SoldOnEnum](docs/Model/SoldOnEnum.md)
 - [SpecialHours](docs/Model/SpecialHours.md)
 - [Specification](docs/Model/Specification.md)
+- [StatusEnum](docs/Model/StatusEnum.md)
+- [StoreTypeEnum](docs/Model/StoreTypeEnum.md)
 - [Tax](docs/Model/Tax.md)
 - [TimeDuration](docs/Model/TimeDuration.md)
+- [TimeDurationUnitEnum](docs/Model/TimeDurationUnitEnum.md)
 - [VariesBy](docs/Model/VariesBy.md)
 - [Version](docs/Model/Version.md)
+- [WeeklySchedule](docs/Model/WeeklySchedule.md)
 - [Weight](docs/Model/Weight.md)
+- [WeightUnitOfMeasureEnum](docs/Model/WeightUnitOfMeasureEnum.md)
 - [WithdrawByInventoryItemGroupRequest](docs/Model/WithdrawByInventoryItemGroupRequest.md)
 - [WithdrawResponse](docs/Model/WithdrawResponse.md)
 
@@ -214,6 +253,11 @@ Class | Method | HTTP request | Description
 - **Scopes**: 
     - **https://api.ebay.com/oauth/api_scope/sell.inventory**: View and manage your inventory and offers
     - **https://api.ebay.com/oauth/api_scope/sell.inventory.readonly**: View your inventory and offers
+
+
+### bearerAuth
+
+- **Type**: Bearer authentication
 
 ## Tests
 
@@ -232,6 +276,5 @@ vendor/bin/phpunit
 
 This PHP package is automatically generated by the [OpenAPI Generator](https://openapi-generator.tech) project:
 
-- API version: `1.16.1`
-    - Package version: `1.0`
+- API version: `1.18.5`
 - Build package: `org.openapitools.codegen.languages.PhpClientCodegen`
