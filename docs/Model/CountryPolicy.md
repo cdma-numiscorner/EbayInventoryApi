@@ -1,0 +1,10 @@
+# # CountryPolicy
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**country** | [**\OpenAPI\EbayInventoryClient\Model\CountryCodeEnum**](CountryCodeEnum.md) |  | [optional]
+**policy_ids** | **string[]** | An array of custom policy identifiers that apply to the country specified by &lt;a href&#x3D;\&quot;/develop/api/sell/inventory_api#sell-inventory_api-offer-bulkcreateoffer.countrypolicy.country\&quot;&gt;listingPolicies.regionalTakeBackPolicies.countryPolicies.country&lt;/a&gt;.&lt;br&gt;&lt;br&gt;Product compliance and take-back policy information may be returned using the following methods:&lt;ul&gt;&lt;li&gt;&lt;a href&#x3D;\&quot;/develop/api/sell/account_api_v1#sell-account_api_v1-get-getcustompolicies\&quot; target&#x3D;\&quot;_blank\&quot;&gt;getCustomPolicies&lt;/a&gt;&lt;br&gt;&lt;br&gt;Set &lt;code&gt;policy_types&lt;/code&gt; to:&lt;ul&gt;&lt;li&gt;&lt;code&gt;PRODUCT_COMPLIANCE&lt;/code&gt; for product compliance policies&lt;/li&gt;&lt;li&gt;&lt;code&gt;TAKE_BACK&lt;/code&gt; for takeback policies&lt;/li&gt;&lt;/ul&gt;&lt;br&gt;This returns the list of specified policies and corresponding &lt;b&gt;customPolicyId&lt;/b&gt; values a seller has created.&lt;/li&gt;&lt;li&gt;&lt;a href&#x3D;\&quot;/develop/api/sell/account_api_v1#sell-account_api_v1-get-getcustompolicy\&quot; target&#x3D;\&quot;_blank\&quot;&gt;getCustomPolicy&lt;/a&gt; with &lt;code&gt;custom_policy_id &#x3D; customPolicyId&lt;/code&gt;&lt;br&gt;&lt;br&gt;Returns the details of the policy specified by &lt;b&gt;customPolicyId&lt;/b&gt;&lt;/li&gt;&lt;/ul&gt;For information about creating and managing custom policies, refer to the &lt;a href&#x3D;\&quot;/api-docs/sell/account/resources/methods#h2-custom_policy\&quot; target&#x3D;\&quot;_blank\&quot;&gt;custom_policy&lt;/a&gt; resource in the &lt;b&gt;Account API v1&lt;/b&gt;. | [optional]
+
+[[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)
