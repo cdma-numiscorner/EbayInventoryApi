@@ -64,6 +64,7 @@ class InventoryItemWithSkuLocale implements ModelInterface, ArrayAccess, \JsonSe
         'availability' => '\OpenAPI\EbayInventoryClient\Model\Availability',
         'condition' => 'string',
         'condition_description' => 'string',
+        'condition_descriptors' => '\OpenAPI\EbayInventoryClient\Model\ConditionDescriptor[]',
         'locale' => 'string',
         'package_weight_and_size' => '\OpenAPI\EbayInventoryClient\Model\PackageWeightAndSize',
         'product' => '\OpenAPI\EbayInventoryClient\Model\Product',
@@ -81,6 +82,7 @@ class InventoryItemWithSkuLocale implements ModelInterface, ArrayAccess, \JsonSe
         'availability' => null,
         'condition' => null,
         'condition_description' => null,
+        'condition_descriptors' => null,
         'locale' => null,
         'package_weight_and_size' => null,
         'product' => null,
@@ -117,6 +119,7 @@ class InventoryItemWithSkuLocale implements ModelInterface, ArrayAccess, \JsonSe
         'availability' => 'availability',
         'condition' => 'condition',
         'condition_description' => 'conditionDescription',
+        'condition_descriptors' => 'conditionDescriptors',
         'locale' => 'locale',
         'package_weight_and_size' => 'packageWeightAndSize',
         'product' => 'product',
@@ -132,6 +135,7 @@ class InventoryItemWithSkuLocale implements ModelInterface, ArrayAccess, \JsonSe
         'availability' => 'setAvailability',
         'condition' => 'setCondition',
         'condition_description' => 'setConditionDescription',
+        'condition_descriptors' => 'setConditionDescriptors',
         'locale' => 'setLocale',
         'package_weight_and_size' => 'setPackageWeightAndSize',
         'product' => 'setProduct',
@@ -147,6 +151,7 @@ class InventoryItemWithSkuLocale implements ModelInterface, ArrayAccess, \JsonSe
         'availability' => 'getAvailability',
         'condition' => 'getCondition',
         'condition_description' => 'getConditionDescription',
+        'condition_descriptors' => 'getConditionDescriptors',
         'locale' => 'getLocale',
         'package_weight_and_size' => 'getPackageWeightAndSize',
         'product' => 'getProduct',
@@ -216,6 +221,7 @@ class InventoryItemWithSkuLocale implements ModelInterface, ArrayAccess, \JsonSe
         $this->container['availability'] = $data['availability'] ?? null;
         $this->container['condition'] = $data['condition'] ?? null;
         $this->container['condition_description'] = $data['condition_description'] ?? null;
+        $this->container['condition_descriptors'] = $data['condition_descriptors'] ?? null;
         $this->container['locale'] = $data['locale'] ?? null;
         $this->container['package_weight_and_size'] = $data['package_weight_and_size'] ?? null;
         $this->container['product'] = $data['product'] ?? null;
@@ -314,6 +320,30 @@ class InventoryItemWithSkuLocale implements ModelInterface, ArrayAccess, \JsonSe
     public function setConditionDescription($condition_description)
     {
         $this->container['condition_description'] = $condition_description;
+
+        return $this;
+    }
+
+    /**
+     * Gets condition_descriptors
+     *
+     * @return \OpenAPI\EbayInventoryClient\Model\ConditionDescriptor[]|null
+     */
+    public function getConditionDescriptors()
+    {
+        return $this->container['condition_descriptors'];
+    }
+
+    /**
+     * Sets condition_descriptors
+     *
+     * @param \OpenAPI\EbayInventoryClient\Model\ConditionDescriptor[]|null $condition_descriptors This container is used by the seller to provide additional information about the condition of an item in a structured format.
+     *
+     * @return self
+     */
+    public function setConditionDescriptors($condition_descriptors)
+    {
+        $this->container['condition_descriptors'] = $condition_descriptors;
 
         return $this;
     }
@@ -501,5 +531,4 @@ class InventoryItemWithSkuLocale implements ModelInterface, ArrayAccess, \JsonSe
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
 
