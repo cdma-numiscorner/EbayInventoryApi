@@ -63,6 +63,7 @@ class InventoryItemWithSkuLocaleGroupid implements ModelInterface, ArrayAccess, 
         'availability' => '\OpenAPI\EbayInventoryClient\Model\AvailabilityWithAll',
         'condition' => 'string',
         'condition_description' => 'string',
+        'condition_descriptors' => '\OpenAPI\EbayInventoryClient\Model\ConditionDescriptor[]',
         'group_ids' => 'string[]',
         'inventory_item_group_keys' => 'string[]',
         'locale' => 'string',
@@ -82,6 +83,7 @@ class InventoryItemWithSkuLocaleGroupid implements ModelInterface, ArrayAccess, 
         'availability' => null,
         'condition' => null,
         'condition_description' => null,
+        'condition_descriptors' => null,
         'group_ids' => null,
         'inventory_item_group_keys' => null,
         'locale' => null,
@@ -120,6 +122,7 @@ class InventoryItemWithSkuLocaleGroupid implements ModelInterface, ArrayAccess, 
         'availability' => 'availability',
         'condition' => 'condition',
         'condition_description' => 'conditionDescription',
+        'condition_descriptors' => 'conditionDescriptors',
         'group_ids' => 'groupIds',
         'inventory_item_group_keys' => 'inventoryItemGroupKeys',
         'locale' => 'locale',
@@ -137,6 +140,7 @@ class InventoryItemWithSkuLocaleGroupid implements ModelInterface, ArrayAccess, 
         'availability' => 'setAvailability',
         'condition' => 'setCondition',
         'condition_description' => 'setConditionDescription',
+        'condition_descriptors' => 'setConditionDescriptors',
         'group_ids' => 'setGroupIds',
         'inventory_item_group_keys' => 'setInventoryItemGroupKeys',
         'locale' => 'setLocale',
@@ -154,6 +158,7 @@ class InventoryItemWithSkuLocaleGroupid implements ModelInterface, ArrayAccess, 
         'availability' => 'getAvailability',
         'condition' => 'getCondition',
         'condition_description' => 'getConditionDescription',
+        'condition_descriptors' => 'getConditionDescriptors',
         'group_ids' => 'getGroupIds',
         'inventory_item_group_keys' => 'getInventoryItemGroupKeys',
         'locale' => 'getLocale',
@@ -225,6 +230,7 @@ class InventoryItemWithSkuLocaleGroupid implements ModelInterface, ArrayAccess, 
         $this->container['availability'] = $data['availability'] ?? null;
         $this->container['condition'] = $data['condition'] ?? null;
         $this->container['condition_description'] = $data['condition_description'] ?? null;
+        $this->container['condition_descriptors'] = $data['condition_descriptors'] ?? null;
         $this->container['group_ids'] = $data['group_ids'] ?? null;
         $this->container['inventory_item_group_keys'] = $data['inventory_item_group_keys'] ?? null;
         $this->container['locale'] = $data['locale'] ?? null;
@@ -325,6 +331,30 @@ class InventoryItemWithSkuLocaleGroupid implements ModelInterface, ArrayAccess, 
     public function setConditionDescription($condition_description)
     {
         $this->container['condition_description'] = $condition_description;
+
+        return $this;
+    }
+
+    /**
+     * Gets condition_descriptors
+     *
+     * @return \OpenAPI\EbayInventoryClient\Model\ConditionDescriptor[]|null
+     */
+    public function getConditionDescriptors()
+    {
+        return $this->container['condition_descriptors'];
+    }
+
+    /**
+     * Sets condition_descriptors
+     *
+     * @param \OpenAPI\EbayInventoryClient\Model\ConditionDescriptor[]|null $condition_descriptors This container is used by the seller to provide additional information about the condition of an item in a structured format.
+     *
+     * @return self
+     */
+    public function setConditionDescriptors($condition_descriptors)
+    {
+        $this->container['condition_descriptors'] = $condition_descriptors;
 
         return $this;
     }
@@ -560,5 +590,4 @@ class InventoryItemWithSkuLocaleGroupid implements ModelInterface, ArrayAccess, 
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
 
